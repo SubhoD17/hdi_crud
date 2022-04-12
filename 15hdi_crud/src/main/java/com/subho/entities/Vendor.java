@@ -3,7 +3,7 @@ import java.beans.*;
 import lombok.Getter;
 import lombok.Setter;
 
-public class Vendor {
+public class Vendor { 
 
 	@Getter
 	@Setter
