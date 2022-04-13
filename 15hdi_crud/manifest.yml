@@ -7,6 +7,6 @@ applications:
   buildpacks:
   - sap_java_buildpack
   services:
-  - hdi_container
+  - hana_container
   
   
