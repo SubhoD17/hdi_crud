@@ -4,6 +4,7 @@ import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.subho.businesslogic.VendorOperation;
@@ -26,8 +27,8 @@ public class VendorController {
 		return vendorRepo.getSingleVendor(id);
 	}
 	
-	@PostMapping("/vendors")
-	public Vendor createNewVendor(Vendor payload) throws SQLException {
+	@PostMapping("/vendor")
+	public Vendor createNewVendor( @RequestBody Vendor payload) throws SQLException {
 		return vendorRepo.createVendor(payload);
 	}
      

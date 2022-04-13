@@ -94,17 +94,21 @@ public class VendorOperation {
 //	Class 16
 //	Create operation in Vendor table
 	public Vendor createVendor(Vendor payload) throws SQLException {
-		String lv_query = "INSERT INTO VENDOR VALUES(?,?,?,?,?,?,'A',?)";
-		PreparedStatement prpstmt = conn.prepareStatement(lv_query);
-		prpstmt.setString(1, payload.getId());
-		prpstmt.setString(2, payload.getFirstName());
-		prpstmt.setString(3, payload.getLastName());
-		prpstmt.setString(4, payload.getCompanyName());
-		prpstmt.setString(5, payload.getWebsite());
-		prpstmt.setString(6, payload.getEmail());
-		prpstmt.setString(7, payload.getGstNumber());
+//		String lv_query = "INSERT INTO VENDOR VALUES(?,?,?,?,?,?,'A',?)";
 		
-		int row = prpstmt.executeUpdate();
+		String lv_query = "INSERT INTO VENDOR VALUES ( id,firstname, lastname, companyname ) VALUES ('" + payload.getId() + "', '" + payload.getFirstName() + "', '" +  payload.getLastName() + "', '" + payload.getCompanyName() + "')";
+//		PreparedStatement prpstmt = conn.prepareStatement(lv_query);
+		
+		
+//		prpstmt.setString(1, payload.getId());
+//		prpstmt.setString(2, payload.getFirstName());
+//		prpstmt.setString(3, payload.getLastName());
+//		prpstmt.setString(4, payload.getCompanyName());
+//		prpstmt.setString(5, payload.getWebsite());
+//		prpstmt.setString(6, payload.getEmail());
+//		prpstmt.setString(7, payload.getGstNumber());
+//		
+//		int row = prpstmt.executeUpdate();
 		return payload;
 	}
 	
